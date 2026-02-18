@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minuteur de Cuisine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Minuteur de Cuisine</h1>
+        </header>
+        
+        <main>
+            <div class="timer-display">
+                <div class="time-inputs">
+                    <div class="input-group">
+                        <label for="minutes">Minutes</label>
+                        <input type="number" id="minutes" min="0" max="59" value="5">
+                    </div>
+                    <div class="separator">:</div>
+                    <div class="input-group">
+                        <label for="seconds">Secondes</label>
+                        <input type="number" id="seconds" min="0" max="59" value="0">
+                    </div>
+                </div>
+                
+                <div class="time-display" id="timeDisplay">
+                    <span id="displayMinutes">05</span>:<span id="displaySeconds">00</span>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="startBtn" class="btn btn-primary">Démarrer</button>
+                <button id="pauseBtn" class="btn btn-secondary" disabled>Pause</button>
+                <button id="resetBtn" class="btn btn-tertiary">Reset</button>
+            </div>
+            
+            <div class="status" id="status">
+                <span id="statusText">Prêt</span>
+            </div>
+        </main>
+        
+        <div class="notification" id="notification">
+            <div class="notification-content">
+                <h2>Temps écoulé!</h2>
+                <p>Votre minuteur est terminé</p>
+                <button id="closeNotification" class="btn btn-primary">OK</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
